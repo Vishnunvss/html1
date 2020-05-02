@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nexus_log-in</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<meta name="HandheldFriendly" content="true">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+<link rel="stylesheet" type="text/css" 
+href="jquery-ui.structure.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui.theme.css">
+</head>
+<body>
+	<div id="main1" class="container">
+		<div class="row1">
+			<h2 id="head1">NEXUS GROUP OF HOTELS</h2>
+		</div>
+		<div class="row1">
+			
+			<img id="nexus-white1" src="images/nexus-white1.png">
+				
+		</div>
+
+		<form style="padding:2%;margin:2%" onsubmit="return validate()" action="servicest1.html">
+ <!--to get room no-->
+			<div class="row">
+				<div class="col-lg-3 col-sm-0 col-md-0"></div>
+
+				<div class="col-lg-3 col-sm-1 col-md-3" style="padding:1%;text-align:center;"><h4 style="color:#f9f9f9;font-weight:bold;">Room no:</h4></div>
+
+				<div class="col-lg-3 col-sm-1 col-md-3"><!-- getting room no from user-->
+
+					<input type="text" id="roomno" class="form-control" required>	
+
+<label id="userwarn" style="color:yellow;visibility: hidden;" >invalid roomno or access key</label></div>
+
+				<div class="col-lg-3 col-sm-0 col-md-0"></div>
+			</div>
+<!--to get access key-->
+				<div class="row">
+				<div class="col-lg-3 col-sm-0 col-md-0"></div>
+				<div class="col-lg-3 col-sm-1 col-md-3" style="padding:1%;text-align:center;"><h4 style="color:#f9f9f9;font-weight:bold;">Access code :</h4></div>
+				<div class="col-lg-3 col-sm-1 col-md-3">
+					<input type="text" id="accesskey" class="form-control" required>	
+                </div>
+				<div class="col-lg-3 col-sm-0 col-md-0"></div>
+			</div>
+<!--log in button-->
+			<div class="row2">
+				 <button type="submit" id="log-in" value="submit" class="btn btn-warning">Log in</button>
+			</div>
+
+		</form>
+		
+	</div>
+<style type="text/css">
+	body{
+		background-color:#c81912;
+	}
+	#head1{
+		color:#f9f9f9;
+		font-size: 50px;
+		font-weight: bold;
+
+	}
+	.row1{
+		align-items: center;
+		text-align:center;
+		float:center;
+		padding :0%;
+	}
+	.row2{
+		float:center;
+		text-align: center;
+		padding:2%;
+	}
+	#main1{
+       
+		margin:5%;
+		
+	}
+	#nexus-white1{
+		margin:2%;
+		height:20%;
+		width:15%;
+	}
+
+</style>
+
+</body>
+
+<script type ="text/javascript" src="jquery-3.5.0.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script type="text/javascript">
+
+function validate(){
+	var roomno=document.getElementById("roomno");
+	var accesskey=document.getElementById("accesskey");
+	if((roomno.value.trim()=="")||(accesskey.value.trim()==""))
+	{
+      roomno.style.border="1px solid yellow";
+	  roomno.style.boxShadow="1px 1px 1px 1px yellow";
+	  accesskey.style.border="1px solid yellow";
+	  accesskey.style.boxShadow="1px 1px 1px 1px yellow";
+      document.getElementById("userwarn").style.visibility="visible"
+	  return false;
+	}
+	else{
+		return true;
+	}
+}
+
+function fn2(){
+		setInterval(fn1,3000);
+	}
+	fn2();
+	function fn1(){
+		$("#nexus-white1").fadeToggle(3000);
+	}
+           
+
+
+	
+	
+</script>
+</html>

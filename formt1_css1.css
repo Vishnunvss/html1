@@ -1,0 +1,50 @@
+
+/*intro title styling*/
+.row1{
+	align-items:center;
+	text-align:center;
+
+     padding-left: 1%;
+     padding-right: 1%;
+     padding-bottom: 1%;
+	font-weight:bold;
+}
+
+
+/*intro slides styling*/
+.carousel-inner{
+	max-height: 400px;
+	width:100%;
+}
+
+
+/*navbar intro page styling*/
+#navlist{
+	list-style-type: none;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	padding-top: 1%
+	  padding-left: 1%;
+     padding-right: 1%;
+     padding-bottom: 0.1%;
+}
+.intro_nav_items{
+	color:white;
+
+}
+.intro_nav_list{
+	display:inline-block;
+		margin-left: 0.5%;
+	margin-right: 0.5%;
+}
+.intro_nav_list:hover{
+	background-color: white;
+	color:#c81912;
+	
+}
+
+.intro_nav_items:hover{
+	color:#c81912;
+}
+
+
